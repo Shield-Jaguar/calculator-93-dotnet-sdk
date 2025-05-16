@@ -59,7 +59,7 @@ The generated SDK also contain one or more Tests, which are contained in the Tes
 
 ## Initialize the API Client
 
-**_Note:_** Documentation for the client can be found [here.](https://www.github.com/Shield-Jaguar/calculator-93-dotnet-sdk/tree/3.3.3/doc/client.md)
+**_Note:_** Documentation for the client can be found [here.](https://www.github.com/Shield-Jaguar/calculator-93-dotnet-sdk/tree/5.5.5/doc/client.md)
 
 The following parameters are configurable for the API Client:
 
@@ -67,7 +67,7 @@ The following parameters are configurable for the API Client:
 |  --- | --- | --- |
 | Environment | `Environment` | The API environment. <br> **Default: `Environment.Production`** |
 | Timeout | `TimeSpan` | Http client timeout.<br>*Default*: `TimeSpan.FromSeconds(100)` |
-| HttpClientConfiguration | [`Action<HttpClientConfiguration.Builder>`](https://www.github.com/Shield-Jaguar/calculator-93-dotnet-sdk/tree/3.3.3/doc/http-client-configuration-builder.md) | Action delegate that configures the HTTP client by using the HttpClientConfiguration.Builder for customizing API call settings.<br>*Default*: `new HttpClient()` |
+| HttpClientConfiguration | [`Action<HttpClientConfiguration.Builder>`](https://www.github.com/Shield-Jaguar/calculator-93-dotnet-sdk/tree/5.5.5/doc/http-client-configuration-builder.md) | Action delegate that configures the HTTP client by using the HttpClientConfiguration.Builder for customizing API call settings.<br>*Default*: `new HttpClient()` |
 
 The API client can be initialized as follows:
 
@@ -79,25 +79,25 @@ APIMATICCalculatorClient client = new APIMATICCalculatorClient.Builder()
 
 ## List of APIs
 
-* [Simple Calculator](https://www.github.com/Shield-Jaguar/calculator-93-dotnet-sdk/tree/3.3.3/doc/controllers/simple-calculator.md)
+* [Simple Calculator](https://www.github.com/Shield-Jaguar/calculator-93-dotnet-sdk/tree/5.5.5/doc/controllers/simple-calculator.md)
 
 ## SDK Infrastructure
 
 ### Configuration
 
-* [HttpClientConfiguration](https://www.github.com/Shield-Jaguar/calculator-93-dotnet-sdk/tree/3.3.3/doc/http-client-configuration.md)
-* [HttpClientConfigurationBuilder](https://www.github.com/Shield-Jaguar/calculator-93-dotnet-sdk/tree/3.3.3/doc/http-client-configuration-builder.md)
+* [HttpClientConfiguration](https://www.github.com/Shield-Jaguar/calculator-93-dotnet-sdk/tree/5.5.5/doc/http-client-configuration.md)
+* [HttpClientConfigurationBuilder](https://www.github.com/Shield-Jaguar/calculator-93-dotnet-sdk/tree/5.5.5/doc/http-client-configuration-builder.md)
 
 ### HTTP
 
-* [HttpCallback](https://www.github.com/Shield-Jaguar/calculator-93-dotnet-sdk/tree/3.3.3/doc/http-callback.md)
-* [HttpContext](https://www.github.com/Shield-Jaguar/calculator-93-dotnet-sdk/tree/3.3.3/doc/http-context.md)
-* [HttpRequest](https://www.github.com/Shield-Jaguar/calculator-93-dotnet-sdk/tree/3.3.3/doc/http-request.md)
-* [HttpResponse](https://www.github.com/Shield-Jaguar/calculator-93-dotnet-sdk/tree/3.3.3/doc/http-response.md)
-* [HttpStringResponse](https://www.github.com/Shield-Jaguar/calculator-93-dotnet-sdk/tree/3.3.3/doc/http-string-response.md)
+* [HttpCallback](https://www.github.com/Shield-Jaguar/calculator-93-dotnet-sdk/tree/5.5.5/doc/http-callback.md)
+* [HttpContext](https://www.github.com/Shield-Jaguar/calculator-93-dotnet-sdk/tree/5.5.5/doc/http-context.md)
+* [HttpRequest](https://www.github.com/Shield-Jaguar/calculator-93-dotnet-sdk/tree/5.5.5/doc/http-request.md)
+* [HttpResponse](https://www.github.com/Shield-Jaguar/calculator-93-dotnet-sdk/tree/5.5.5/doc/http-response.md)
+* [HttpStringResponse](https://www.github.com/Shield-Jaguar/calculator-93-dotnet-sdk/tree/5.5.5/doc/http-string-response.md)
 
 ### Utilities
 
-* [ApiException](https://www.github.com/Shield-Jaguar/calculator-93-dotnet-sdk/tree/3.3.3/doc/api-exception.md)
-* [ApiHelper](https://www.github.com/Shield-Jaguar/calculator-93-dotnet-sdk/tree/3.3.3/doc/api-helper.md)
+* [ApiException](https://www.github.com/Shield-Jaguar/calculator-93-dotnet-sdk/tree/5.5.5/doc/api-exception.md)
+* [ApiHelper](https://www.github.com/Shield-Jaguar/calculator-93-dotnet-sdk/tree/5.5.5/doc/api-helper.md)
 
