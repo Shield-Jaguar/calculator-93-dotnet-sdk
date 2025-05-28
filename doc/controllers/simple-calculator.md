@@ -1,7 +1,7 @@
 # Simple Calculator
 
-```csharp
-SimpleCalculatorController simpleCalculatorController = client.SimpleCalculatorController;
+```python
+simple_calculator_controller = client.simple_calculator
 ```
 
 ## Class Name
@@ -13,9 +13,9 @@ SimpleCalculatorController simpleCalculatorController = client.SimpleCalculatorC
 
 Calculates the expression using the specified operation.
 
-```csharp
-GetCalculateAsync(
-    Models.GetCalculateInput input)
+```python
+def get_calculate(self,
+                 options=dict())
 ```
 
 ## Parameters
@@ -23,31 +23,21 @@ GetCalculateAsync(
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `operation` | [`OperationTypeEnum`](../../doc/models/operation-type-enum.md) | Template, Required | The operator to apply on the variables |
-| `x` | `double` | Query, Required | The LHS value |
-| `y` | `double` | Query, Required | The RHS value |
+| `x` | `float` | Query, Required | The LHS value |
+| `y` | `float` | Query, Required | The RHS value |
 
 ## Response Type
 
-`Task<double>`
+`float`
 
 ## Example Usage
 
-```csharp
-GetCalculateInput getCalculateInput = new GetCalculateInput
-{
-    Operation = OperationTypeEnum.MULTIPLY,
-    X = 222.14,
-    Y = 165.14,
-};
-
-try
-{
-    double result = await simpleCalculatorController.GetCalculateAsync(getCalculateInput);
+```python
+collect = {
+    'operation': OperationTypeEnum.MULTIPLY,
+    'x': 222.14,
+    'y': 165.14
 }
-catch (ApiException e)
-{
-    // TODO: Handle exception here
-    Console.WriteLine(e.Message);
-}
+result = simple_calculator_controller.get_calculate(collect)
 ```
 

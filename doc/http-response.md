@@ -1,13 +1,15 @@
 
 # HttpResponse
 
-HttpResponse stores necessary information about the http response.
+Http response received.
 
-## Properties
+## Parameters
 
-| Name | Description | Type |
+| Name | Type | Description |
 |  --- | --- | --- |
-| <code>StatusCode</code> | Gets the HTTP Status code of the http response. | `int` |
-| <code>Headers</code> | Gets the headers of the http response. | `Dictionary<string, string>` |
-| <code>RawBody</code> | Gets the stream of the body. | `Stream` |
+| status_code | `int` | The status code returned by the server. |
+| reason_phrase | `str` | The reason phrase returned by the server. |
+| headers | `dict` | Response headers. |
+| text | `str` | Response body. |
+| request | [`HttpRequest`](../doc/http-request.md) | The request that resulted in this response. |
 

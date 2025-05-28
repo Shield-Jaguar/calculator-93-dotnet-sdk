@@ -5,52 +5,31 @@ The following parameters are configurable for the API Client:
 
 | Parameter | Type | Description |
 |  --- | --- | --- |
-| Environment | `Environment` | The API environment. <br> **Default: `Environment.Production`** |
-| Timeout | `TimeSpan` | Http client timeout.<br>*Default*: `TimeSpan.FromSeconds(100)` |
-| HttpClientConfiguration | [`Action<HttpClientConfiguration.Builder>`](../doc/http-client-configuration-builder.md) | Action delegate that configures the HTTP client by using the HttpClientConfiguration.Builder for customizing API call settings.<br>*Default*: `new HttpClient()` |
+| environment | `Environment` | The API environment. <br> **Default: `Environment.PRODUCTION`** |
+| http_client_instance | `HttpClient` | The Http Client passed from the sdk user for making requests |
+| override_http_client_configuration | `bool` | The value which determines to override properties of the passed Http Client from the sdk user |
+| http_call_back | `HttpCallBack` | The callback value that is invoked before and after an HTTP call is made to an endpoint |
+| timeout | `float` | The value to use for connection timeout. <br> **Default: 60** |
+| max_retries | `int` | The number of times to retry an endpoint call if it fails. <br> **Default: 0** |
+| backoff_factor | `float` | A backoff factor to apply between attempts after the second try. <br> **Default: 2** |
+| retry_statuses | `Array of int` | The http statuses on which retry is to be done. <br> **Default: [408, 413, 429, 500, 502, 503, 504, 521, 522, 524]** |
+| retry_methods | `Array of string` | The http methods on which retry is to be done. <br> **Default: ['GET', 'PUT']** |
 
 The API client can be initialized as follows:
 
-```csharp
-APIMATICCalculatorClient client = new APIMATICCalculatorClient.Builder()
-    .Environment(APIMATICCalculator.Standard.Environment.Production)
-    .Build();
+```python
+client = ApimaticcalculatorClient(
+    environment=Environment.PRODUCTION
+)
 ```
 
-## APIMATIC CalculatorClient Class
+## APIMATIC Calculator Client
 
 The gateway for the SDK. This class acts as a factory for the Controllers and also holds the configuration of the SDK.
 
-### Controllers
+## Controllers
 
 | Name | Description |
 |  --- | --- |
-| SimpleCalculatorController | Gets SimpleCalculatorController controller. |
-
-### Properties
-
-| Name | Description | Type |
-|  --- | --- | --- |
-| HttpClientConfiguration | Gets the configuration of the Http Client associated with this client. | [`IHttpClientConfiguration`](../doc/http-client-configuration.md) |
-| Timeout | Http client timeout. | `TimeSpan` |
-| Environment | Current API environment. | `Environment` |
-
-### Methods
-
-| Name | Description | Return Type |
-|  --- | --- | --- |
-| `GetBaseUri(Server alias = Server.Calculator)` | Gets the URL for a particular alias in the current environment and appends it with template parameters. | `string` |
-| `ToBuilder()` | Creates an object of the APIMATIC CalculatorClient using the values provided for the builder. | `Builder` |
-
-## APIMATIC CalculatorClient Builder Class
-
-Class to build instances of APIMATIC CalculatorClient.
-
-### Methods
-
-| Name | Description | Return Type |
-|  --- | --- | --- |
-| `HttpClientConfiguration(Action<`[`HttpClientConfiguration.Builder`](../doc/http-client-configuration-builder.md)`> action)` | Gets the configuration of the Http Client associated with this client. | `Builder` |
-| `Timeout(TimeSpan timeout)` | Http client timeout. | `Builder` |
-| `Environment(Environment environment)` | Current API environment. | `Builder` |
+| simple_calculator | Gets SimpleCalculatorController |
 
